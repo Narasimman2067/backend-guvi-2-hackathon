@@ -33,6 +33,6 @@ app.use("/",(err,req,res,next)=>{
 
 
 app.listen(PORT,()=>{
-    connect()
-    console.log(`{PORT},server connected succesfully` )
+
+    console.log(`${PORT},server connected succesfully` )
 })
