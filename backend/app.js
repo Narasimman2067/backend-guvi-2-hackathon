@@ -24,6 +24,9 @@ console.log("mongodb server connected succesfully")
 } catch (error) {
     console.log(error)
 }
+app.get("/",(req,res)=>{
+    res.send("hello i start the server")
+})
 app.use("/",(err,req,res,next)=>{
     res.status(200).send("operation success")
     });
