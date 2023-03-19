@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-import mongoose, { connect } from 'mongoose';
+import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import userRouter from './routes/user-routes.js';
 import adminRouter from './routes/admin-routes.js';
