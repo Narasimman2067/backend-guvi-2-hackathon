@@ -1,6 +1,6 @@
 import express from 'express'
 import cors from 'cors'
-import mongoose from 'mongoose';
+import mongoose, { connect } from 'mongoose';
 import dotenv from 'dotenv';
 import userRouter from './routes/user-routes.js';
 import adminRouter from './routes/admin-routes.js';
@@ -8,7 +8,7 @@ import movieRouter from './routes/movies-routes.js';
 import bookingsRouter from './routes/booking-routes.js';
 
 dotenv.config()
-
+const PORT=process.env.PORT
 const app =express();
 app.use(cors());
 app.use(express.json())
@@ -32,6 +32,7 @@ app.use("/",(err,req,res,next)=>{
     });
 
 
-app.listen(9000,()=>{
-    console.log('9000 server connected succesfully')
+app.listen(PORT,()=>{
+    connect()
+    console.log(`{PORT},server connected succesfully` )
 })
