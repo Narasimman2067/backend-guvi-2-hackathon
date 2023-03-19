@@ -29,6 +29,6 @@ app.use("/",(err,req,res,next)=>{
     });
 
 
-app.listen(3000,()=>{
-    console.log('3000 server connected succesfully')
+app.listen(9000,()=>{
+    console.log('9000 server connected succesfully')
 })
