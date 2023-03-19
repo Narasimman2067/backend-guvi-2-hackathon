@@ -1,12 +1,12 @@
 {
 "version":2,
-"name":"movie-data",
+
 
 "builds":[
 
 {
 
-"src":"./app.js",
+"src":"./index.js",
 "use":"@vercel/node"
 
 }
@@ -15,7 +15,7 @@
 "routes":[
     {
     "src":"/(.*)",
-    "dest":"/app.js"
+    "dest":"/"
 }]
 
 }
