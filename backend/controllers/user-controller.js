@@ -70,9 +70,7 @@ export const loginUser=async (req,res,next)=>{
     return res.status(400).json({ message: "incorrect email or password" });
     }
     // creating of token to provide secret key
-    const token =jwt.sign({id:existingUser._id},process.env.SECRET_KEY,{
-      
-    });   
+    const token =jwt.sign({id:existingUser._id},process.env.SECRET_KEY,{});   
 
     res.status(200).json({ message: "Authentication complete",token,id:existingUser._id });
  
