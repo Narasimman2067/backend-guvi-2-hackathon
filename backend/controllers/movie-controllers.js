@@ -53,7 +53,7 @@ export const addMovies = async (req, res, next) => {
   const adminUser =await Admin.findById(adminId);
   session.startTransaction();
   await movie.save({session})
-  await adminUser.addedMovies.push(movie);
+  adminUser.addedMovies.push(movie);
   await adminUser.save({session})
   await session.commitTransaction();
  
